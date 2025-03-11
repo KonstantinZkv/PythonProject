@@ -16,7 +16,7 @@ def mask_account_card(string: str) -> tuple[str, str]:
 test = "Visa Platinum 7000792289606361" #для теста
 name_card, number_card = mask_account_card(test)
 masked_number = get_mask_card_number(number_card)
-print(f'{name_card}: {masked_number}')
+print(f'{name_card} {masked_number}')
 
 
 def get_date(input_string: str) -> str:
