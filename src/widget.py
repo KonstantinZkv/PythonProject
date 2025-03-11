@@ -1,22 +1,31 @@
 import re
 
-from src.masks import get_mask_card_number
+from src.masks import get_mask_account, get_mask_card_number
 
 
-def mask_account_card(string: str) -> tuple[str, str]:
+def mask_account_card(string: str) -> str:
     """Функция обработки информации о картах и счетах"""
 
     string_split = string.split()
-    name_card_or_score = "".join(string_split[:-1])
+    name_card_or_score = " ".join(string_split[:-1])
     number_card_or_score = string_split[-1]
+    if name_card_or_score == "Счет":
+        return f"{name_card_or_score} {get_mask_account(number_card_or_score)}"
+    else:
+        return f"{name_card_or_score} {get_mask_card_number(number_card_or_score)}"
 
-    return name_card_or_score, number_card_or_score
 
-
-test = "Visa Platinum 7000792289606361" #для теста
-name_card, number_card = mask_account_card(test)
-masked_number = get_mask_card_number(number_card)
-print(f'{name_card} {masked_number}')
+# test = "Visa Platinum 7000792289606361" #для теста
+# print(mask_account_card(test))
+#
+# test = "Maestro 7000792289606361"
+# print(mask_account_card(test))
+#
+# test = "Счет 35383033474447895560"
+# print(mask_account_card(test))
+#
+# test = "Счет 73654108430135874305"
+# print(mask_account_card(test))
 
 
 def get_date(input_string: str) -> str:
