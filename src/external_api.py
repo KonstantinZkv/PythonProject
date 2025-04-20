@@ -1,4 +1,5 @@
 import os
+from typing import Dict, List, Union
 
 import requests
 from dotenv import load_dotenv
@@ -7,38 +8,49 @@ load_dotenv()
 API_KEY = os.getenv("API_KEY")
 
 
-def currency_exchange(output_code: str, input_code: str, amount: int | float) -> dict:
-    """Функция конвертации любой валюты"""
-    url = f"https://api.apilayer.com/exchangerates_data/convert?to={input_code}&from={output_code}&amount={amount}"
+def currency_exchange(data: Dict[str, Union[str, int, float]]) -> dict:
+    """Функция конвертации валюты, принимает словарь с параметрами"""
+    try:
+        output_code = data.get("output_code")
+        input_code = data.get("input_code")
+        amount = data.get("amount")
 
-    headers = {"apikey": API_KEY}
+        if output_code is None or input_code is None or amount is None:
+            raise ValueError("Отсутствуют необходимые ключи в словаре")
 
-    response = requests.get(url, headers=headers)
+        url = f"https://api.apilayer.com/exchangerates_data/convert?to={input_code}&from={output_code}&amount={amount}"
+        headers = {"apikey": API_KEY}
 
-    if response.status_code == 200:
-        return response.json()  # Возвращаем JSON-ответ
-    else:
-        response.raise_for_status()  # Генерируем исключение для ошибок
+        response = requests.get(url, headers=headers)
+
+        if response.status_code == 200:
+            return response.json()  # Возвращаем JSON-ответ
+        else:
+            raise Exception(f"Error {response.status_code}: {response.text}")  # Генерируем исключение для ошибок
+
+    except Exception as e:
+        print(f"Ошибка в функции currency_exchange: {e}")
+        return {}
 
 
-def transaction_info(transaction: list[dict]) -> float:
+def transaction_info(transaction: List[Dict]) -> float:
     """Вывод суммы транзакции"""
     if not transaction:  # Проверяем, является ли транзакция пустой
         return 0.0
 
     for item in transaction:
-        if item["operationAmount"]["currency"]["code"] == "RUB":
-            money = float(item["operationAmount"]["amount"])
-            return money
+        currency_code = item["operationAmount"]["currency"]["code"]
+        amount = float(item["operationAmount"]["amount"])
 
-        elif item["operationAmount"]["currency"]["code"] != "RUB":
-            convert = item["operationAmount"]["amount"]
-            input_code = item["operationAmount"]["currency"]["code"]
-            output_code = "RUB"
-            result_dict = currency_exchange(input_code, output_code, convert)
-            money = result_dict["result"]
+        if currency_code == "RUB":
+            return amount
 
-            return float(money)
+        convert = {"input_code": "RUB", "output_code": currency_code, "amount": amount}
+        result_dict = currency_exchange(convert)
+
+        # Проверяем, есть ли результат
+        if "result" in result_dict:
+            return float(result_dict["result"])
 
     return 0.0  # Возвращаем 0.0, если не нашли подходящую валюту
 
@@ -56,7 +68,6 @@ transaction = [
 ]
 
 if __name__ == "__main__":
-
     result = transaction_info(transaction)
     print(result)
     print(type(result))
