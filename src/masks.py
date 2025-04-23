@@ -10,7 +10,7 @@ log_dir = os.path.join(script_dir, "../logs")
 if not os.path.exists(log_dir):
     os.makedirs(log_dir)
 
-file_handler = logging.FileHandler(os.path.join(log_dir, "masks.log"), encoding="utf-8")
+file_handler = logging.FileHandler(os.path.join(log_dir, "masks.log"), mode='w',encoding="utf-8")
 file_formatter = logging.Formatter("%(asctime)s %(filename)s %(funcName)s %(levelname)s: %(message)s")
 file_handler.setFormatter(file_formatter)
 logger.addHandler(file_handler)

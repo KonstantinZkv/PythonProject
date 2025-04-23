@@ -10,7 +10,7 @@ log_file_path = os.path.join(log_dir, "utils.log")
 os.makedirs(log_dir, exist_ok=True)
 
 
-file_handler = logging.FileHandler(log_file_path, encoding="utf-8")
+file_handler = logging.FileHandler(log_file_path, mode='w', encoding="utf-8")
 console_handler = logging.StreamHandler()
 file_formatter = logging.Formatter("%(asctime)s - %(filename)s - %(funcName)s - %(levelname)s: %(message)s")
 file_handler.setFormatter(file_formatter)

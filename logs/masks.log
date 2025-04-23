@@ -1,0 +1,4 @@
+2025-04-24 01:34:44,455 masks.py get_mask_card_number INFO: Получаем данные карты
+2025-04-24 01:34:44,455 masks.py get_mask_card_number INFO: Замаскированный номер карты 1111 22** **** 4444
+2025-04-24 01:34:56,982 masks.py get_mask_account INFO: Получаем номер банковского счета
+2025-04-24 01:34:56,983 masks.py get_mask_account INFO: Возращаем маску счета **5555
