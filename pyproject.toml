@@ -3,15 +3,16 @@ name = "pythonproject"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "Your Name",email = "you@example.com"}
+    {name = "Your Name", email = "you@example.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "requests (>=2.32.3,<3.0.0)",
-    "python-dotenv (>=1.1.0,<2.0.0)"
+    "python-dotenv (>=1.1.0,<2.0.0)",
+    "pandas (>=2.2.3,<3.0.0)",
+    "openpyxl"
 ]
-
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
@@ -22,7 +23,6 @@ flake8 = "^7.1.2"
 mypy = "^1.15.0"
 black = "^25.1.0"
 isort = "^6.0.1"
-
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.5"
