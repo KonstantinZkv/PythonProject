@@ -1,2 +1,0 @@
-2025-04-24 01:35:10,669 - utils.py - load_transactions - INFO: Получаем данные из файла
-2025-04-24 01:35:10,670 - utils.py - load_transactions - INFO: Проверяем, что data — это список

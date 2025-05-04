@@ -1,26 +1,26 @@
-2025-04-27 04:21:38,293 masks.py get_mask_card_number INFO: Получаем данные карты
-2025-04-27 04:21:38,294 masks.py get_mask_card_number INFO: Замаскированный номер карты 7000 79** **** 6361
-2025-04-27 04:21:38,295 masks.py get_mask_card_number INFO: Получаем данные карты
-2025-04-27 04:21:38,295 masks.py get_mask_card_number INFO: Замаскированный номер карты 1234 56** **** 5678
-2025-04-27 04:21:38,295 masks.py get_mask_card_number INFO: Получаем данные карты
-2025-04-27 04:21:38,295 masks.py get_mask_card_number INFO: Замаскированный номер карты 4000 12** **** 9010
-2025-04-27 04:21:38,295 masks.py get_mask_card_number INFO: Получаем данные карты
-2025-04-27 04:21:38,295 masks.py get_mask_card_number INFO: Замаскированный номер карты 5555 55** **** 4444
-2025-04-27 04:21:38,298 masks.py get_mask_account INFO: Получаем номер банковского счета
-2025-04-27 04:21:38,298 masks.py get_mask_account INFO: Возращаем маску счета **5560
-2025-04-27 04:21:38,298 masks.py get_mask_account INFO: Получаем номер банковского счета
-2025-04-27 04:21:38,298 masks.py get_mask_account INFO: Возращаем маску счета **4305
-2025-04-27 04:21:38,298 masks.py get_mask_account INFO: Получаем номер банковского счета
-2025-04-27 04:21:38,299 masks.py get_mask_account INFO: Возращаем маску счета **7890
-2025-04-27 04:21:38,299 masks.py get_mask_account INFO: Получаем номер банковского счета
-2025-04-27 04:21:38,299 masks.py get_mask_account INFO: Возращаем маску счета **3210
-2025-04-27 04:21:38,309 masks.py get_mask_card_number INFO: Получаем данные карты
-2025-04-27 04:21:38,309 masks.py get_mask_card_number INFO: Замаскированный номер карты 7000 79** **** 6361
-2025-04-27 04:21:38,312 masks.py get_mask_card_number INFO: Получаем данные карты
-2025-04-27 04:21:38,312 masks.py get_mask_card_number INFO: Замаскированный номер карты 7000 79** **** 6361
-2025-04-27 04:21:38,314 masks.py get_mask_account INFO: Получаем номер банковского счета
-2025-04-27 04:21:38,314 masks.py get_mask_account INFO: Возращаем маску счета **5560
-2025-04-27 04:21:38,317 masks.py get_mask_account INFO: Получаем номер банковского счета
-2025-04-27 04:21:38,317 masks.py get_mask_account INFO: Возращаем маску счета **7890
-2025-04-27 04:21:38,320 masks.py get_mask_account INFO: Получаем номер банковского счета
-2025-04-27 04:21:38,320 masks.py get_mask_account INFO: Возращаем маску счета **3210
+2025-05-04 18:01:44,445 masks.py get_mask_card_number INFO: Получаем данные карты
+2025-05-04 18:01:44,445 masks.py get_mask_card_number INFO: Замаскированный номер карты 7000 79** **** 6361
+2025-05-04 18:01:44,445 masks.py get_mask_card_number INFO: Получаем данные карты
+2025-05-04 18:01:44,445 masks.py get_mask_card_number INFO: Замаскированный номер карты 1234 56** **** 5678
+2025-05-04 18:01:44,445 masks.py get_mask_card_number INFO: Получаем данные карты
+2025-05-04 18:01:44,445 masks.py get_mask_card_number INFO: Замаскированный номер карты 4000 12** **** 9010
+2025-05-04 18:01:44,445 masks.py get_mask_card_number INFO: Получаем данные карты
+2025-05-04 18:01:44,445 masks.py get_mask_card_number INFO: Замаскированный номер карты 5555 55** **** 4444
+2025-05-04 18:01:44,447 masks.py get_mask_account INFO: Получаем номер банковского счета
+2025-05-04 18:01:44,447 masks.py get_mask_account INFO: Возращаем маску счета **5560
+2025-05-04 18:01:44,447 masks.py get_mask_account INFO: Получаем номер банковского счета
+2025-05-04 18:01:44,447 masks.py get_mask_account INFO: Возращаем маску счета **4305
+2025-05-04 18:01:44,447 masks.py get_mask_account INFO: Получаем номер банковского счета
+2025-05-04 18:01:44,447 masks.py get_mask_account INFO: Возращаем маску счета **7890
+2025-05-04 18:01:44,447 masks.py get_mask_account INFO: Получаем номер банковского счета
+2025-05-04 18:01:44,447 masks.py get_mask_account INFO: Возращаем маску счета **3210
+2025-05-04 18:01:44,460 masks.py get_mask_card_number INFO: Получаем данные карты
+2025-05-04 18:01:44,460 masks.py get_mask_card_number INFO: Замаскированный номер карты 7000 79** **** 6361
+2025-05-04 18:01:44,461 masks.py get_mask_card_number INFO: Получаем данные карты
+2025-05-04 18:01:44,462 masks.py get_mask_card_number INFO: Замаскированный номер карты 7000 79** **** 6361
+2025-05-04 18:01:44,463 masks.py get_mask_account INFO: Получаем номер банковского счета
+2025-05-04 18:01:44,463 masks.py get_mask_account INFO: Возращаем маску счета **5560
+2025-05-04 18:01:44,464 masks.py get_mask_account INFO: Получаем номер банковского счета
+2025-05-04 18:01:44,465 masks.py get_mask_account INFO: Возращаем маску счета **7890
+2025-05-04 18:01:44,466 masks.py get_mask_account INFO: Получаем номер банковского счета
+2025-05-04 18:01:44,466 masks.py get_mask_account INFO: Возращаем маску счета **3210
